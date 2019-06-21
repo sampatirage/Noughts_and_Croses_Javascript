@@ -23,8 +23,14 @@
     <script>
         var currentPlayer = "O";
         
-        function place(box) {
-            if (box.innerText != "") {
+        function place(box) {            
+            markBox(box); 
+            checkWinning();
+            //alert("hay place");
+        }  // end function place(box)
+
+        function markBox(box) {
+             if (box.innerText != "") {
                 // if Box is maked just return
                 return;
             }
@@ -37,8 +43,37 @@
                 }
                 else {
                     currentPlayer = "O";
-                }
+                 }
+
+                 alert("Marked");
             }
+        } // end function markBox(box)
+
+        function checkWinning() {
+            
+            var a1 = document.getElementById("1a").innerText;            
+            var a2 = document.getElementById("2a").innerText;
+            var a3 = document.getElementById("3a").innerText;
+
+            var b1 = document.getElementById("1b").innerText;            
+            var b2 = document.getElementById("2b").innerText;
+            var b3 = document.getElementById("3b").innerText;
+
+             var c1 = document.getElementById("1c").innerText;            
+            var c2 = document.getElementById("2c").innerText;
+            var c3 = document.getElementById("3c").innerText;
+
+            if (a1 == a2 && a1 == a3 && a1 != "") {
+                alert("Winner" + a1);
+            }
+             if (b1 == b2 && b1 == b3 && b1 != "")  {
+                alert("Winner  " + b1);
+            }
+             if (c1 == c2 && c1 == c3 && c1 != "")  {
+                alert("Winner  " + c1);
+            }
+
+
         }
 
 /**/</script>
@@ -46,30 +81,30 @@
 <body>
     <div class="game">
         <div class="Row">
-            <div id="1" onclick="place(this);">
+            <div id="1a" onclick="place(this);">
                 
             </div>
-            <div id="2" onclick="place(this);">
+            <div id="2a" onclick="place(this);">
                
             </div>
-            <div id="3" onclick="place(this);">
+            <div id="3a" onclick="place(this);">
                
             </div>
         </div>
         <div class="Row">
-            <div id="4" onclick="place(this);">
+            <div id="1b" onclick="place(this);">
             </div>
-            <div id="5" onclick="place(this);">
+            <div id="2b" onclick="place(this);">
             </div>
-            <div id="6" onclick="place(this);">
+            <div id="3b" onclick="place(this);">
             </div>
         </div>
         <div class="Row">
-            <div id="7" onclick="place(this);">
+            <div id="1c" onclick="place(this);">
             </div>
-            <div id="8" onclick="place(this);">
+            <div id="2c" onclick="place(this);">
             </div>
-            <div id="9" onclick="place(this);">
+            <div id="3c" onclick="place(this);">
             </div>
         </div>
     </div>
