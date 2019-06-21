@@ -59,12 +59,17 @@
             var b2 = document.getElementById("2b").innerText;
             var b3 = document.getElementById("3b").innerText;
 
-             var c1 = document.getElementById("1c").innerText;            
+            var c1 = document.getElementById("1c").innerText;            
             var c2 = document.getElementById("2c").innerText;
             var c3 = document.getElementById("3c").innerText;
 
+            // a1  a2  a3
+            // b1  b2  b3
+            // c1  c2  c3
+
+            // horizontal rows 
             if (a1 == a2 && a1 == a3 && a1 != "") {
-                alert("Winner" + a1);
+                alert("Winner " + a1);
             }
              if (b1 == b2 && b1 == b3 && b1 != "")  {
                 alert("Winner  " + b1);
@@ -72,8 +77,24 @@
              if (c1 == c2 && c1 == c3 && c1 != "")  {
                 alert("Winner  " + c1);
             }
+              // vertical rows
+             if (a1 == b1 && a1 == c1 && a1 != "") {
+                alert("Winner " + a1);
+            }
+             if (a2 == b2 && a2 == c2 && a2 != "")  {
+                alert("Winner  " + b2);
+            }
+             if (a3 == b3 && a3 == c3 && a3 != "")  {
+                alert("Winner  " + c3);
+            }
 
-
+            // diagonal 
+            if (a1 == b2 && a1 == c3 && a1 != "") {
+                alert("Winner " + a1);
+            }
+            if (c1 == b2 && c1 == a3 && c1 != "") {
+                alert("Winner  " + c1);
+            }
         }
 
 /**/</script>
