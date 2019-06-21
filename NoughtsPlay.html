@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .game {
+            background-color: aqua;
+            width: 860px;
+        }
+
+        .Row div {
+            width: 200px;
+            height: 100px;
+            font-size: 16px;
+            border: groove;
+            float: left;
+            padding: 10px;
+            background-color: deepskyblue;
+        }
+    </style>
+    <script>
+        var currentPlayer = "O";
+        
+        function place(box) {
+            if (box.innerText != "") {
+                // if Box is maked just return
+                return;
+            }
+            else {
+
+                box.innerText = currentPlayer;
+
+                if (currentPlayer == "O") {
+                    currentPlayer = "X";
+                }
+                else {
+                    currentPlayer = "O";
+                }
+            }
+        }
+
+/**/</script>
+</head>
+<body>
+    <div class="game">
+        <div class="Row">
+            <div id="1" onclick="place(this);">
+                
+            </div>
+            <div id="2" onclick="place(this);">
+               
+            </div>
+            <div id="3" onclick="place(this);">
+               
+            </div>
+        </div>
+        <div class="Row">
+            <div id="4" onclick="place(this);">
+            </div>
+            <div id="5" onclick="place(this);">
+            </div>
+            <div id="6" onclick="place(this);">
+            </div>
+        </div>
+        <div class="Row">
+            <div id="7" onclick="place(this);">
+            </div>
+            <div id="8" onclick="place(this);">
+            </div>
+            <div id="9" onclick="place(this);">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
